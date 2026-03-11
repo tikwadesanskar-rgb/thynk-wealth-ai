@@ -40,6 +40,11 @@
       transition: background 0.3s;
     }
     button:hover { background-color: #1e40af; }
+    #diagramBtn {
+      background-color: #065f46;
+      border: 1px solid #34d399;
+    }
+    #diagramBtn:hover { background-color: #047857; }
     #mic-indicator {
       width: 15px;
       height: 15px;
@@ -57,6 +62,7 @@
   <button id="startBtn">Start Listening</button>
   <button id="stopBtn">Stop Listening</button>
   <button id="meetingBtn">Schedule Meeting</button>
+  <button id="diagramBtn">🦯 Smart Stick Block Diagram</button>
   <div id="mic-indicator"></div>
 
   <script>
@@ -127,6 +133,9 @@
     document.getElementById("meetingBtn").onclick = () => {
       speak("Opening Google Meet to schedule your meeting.");
       window.open("https://meet.google.com/", "_blank");
+    };
+    document.getElementById("diagramBtn").onclick = () => {
+      window.open("/block-diagram", "_blank");
     };
   </script>
 </body>
